@@ -1,0 +1,654 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: "poppins", sans-serif;
+    color: white;
+    background-color: #091b2a;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    background-color: #0d2438;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.left {
+    position: relative;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+.left a {
+    color: #FFF;
+    text-decoration: none;
+    animation: slideRight 1s ease forwards;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    animation: slideTop 1s ease;
+}
+
+
+nav ul li {
+    font-size: 20px;
+    margin: 0 20px;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: all ease-in 0.3s;
+}
+
+nav ul li a:hover {
+    filter: drop-shadow(10px 2px 10px 2px #0ef);
+    color: #0ef;
+}
+
+.Home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: #091b2a;
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.leftSection {
+    max-width: 700px;
+    margin-left: 30px;
+}
+
+.leftSection h1 {
+    opacity: 0;
+    animation: slideTop 1s forwards;
+    animation-delay: 1s;
+    font-size: 3rem;
+}
+
+.leftSection h2 {
+    font-size: 2.6rem;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.leftSection p {
+    font-size: 20px;
+    margin: 20px auto;
+    opacity: 0;
+    animation: slideLeft ease 1s forwards;
+    animation-delay: 1s;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    text-decoration: none;
+    border: 2px solid #0ef;
+    font-size: 20px;
+    border-radius: 50%;
+    color: #0ef;
+    transition: ease .5s;
+    opacity: 0;
+    animation: slideLeft 1s forwards;
+    animation-delay: 1s;
+    margin: 30px 15px 30px 0;
+}
+
+
+.social-links a:hover {
+    color: #000;
+    background-color: #0ef;
+    box-shadow: 0 0 20px #0ef;
+}
+
+
+
+#element {
+    color: #0ef;
+}
+
+.rightSection img {
+    width: 440px;
+    height: 440px;
+    border-radius: 50%;
+    margin: 0 auto;
+    cursor: pointer;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 1s;
+    transform: translateX(-10%);
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    background-color: #0ef;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 50px;
+    transition: all ease-in-out 0.1s;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 1s;
+    box-shadow: 0 0 10px #0ef;
+    margin: 20px auto;
+}
+
+.btn:hover {
+    box-shadow: 0 0 5px cyan,
+        0 0 25px cyan, 0 0 50px cyan,
+        0 0 100px cyan, 0 0 200px cyan;
+}
+
+.my-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #0ef;
+    border: 2px solid #0ef;
+    padding: 10px 15px;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 50px;
+    transition: all ease-in-out 0.1s;
+    margin: 20px 0 0 20px;
+
+}
+
+.my-button:hover {
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+    background-color: #0ef;
+    color: #000;
+}
+
+.about {
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.about-img img {
+    /* margin-bottom: 10%; */
+    height: auto;
+    max-width: 630px;
+    border-radius: 50%;
+}
+
+.about-text h2 {
+    text-align: center;
+    font-size: 60px;
+}
+
+.about-text h4 {
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+
+.about-text p {
+    font-size: 17px;
+    color: aliceblue;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+
+#blue {
+    color: #0ef;
+}
+
+.container {
+    padding: 90px;
+    margin: 0 auto;
+}
+
+#services {
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+}
+
+.sub-title span {
+    color: #0ef;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(259px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div {
+    background-color: transparent;
+    border-right: 13px;
+    font-size: 13px;
+    font-weight: 13px;
+    padding: 40px;
+    border-radius: 20px;
+    transition: all ease-in-out 0.2s;
+    transition: background 0.5s transform 0.5s;
+    box-shadow: 1px 1px 20px #012290f7,
+        1px 1px 40px #0053b8f7;
+}
+
+.services-list div:hover {
+    transform: translateY(-10px);
+}
+
+.services-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.services-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services-list div a {
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.read {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #081b29;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef,
+        0 0 25px #0ef;
+}
+
+.read:hover {
+    box-shadow: 0 0 5px cyan,
+        0 0 25px cyan, 0 0 50px cyan,
+        0 0 100px cyan, 0 0 200px cyan;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.container1 {
+    width: 600px;
+    height: 500px;
+    padding: 75px 90px;
+    margin: 0 auto;
+}
+
+.technical-bar {
+    margin-top: 40px;
+}
+
+.heading1 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 10px;
+}
+
+.bar {
+    font-size: 23px;
+    margin-top: 40px;
+}
+
+.technical-bar .bar {
+    margin-top: 40px 0;
+}
+
+.technical-bar .bar:first-child {
+    margin-top: 0;
+}
+
+.technical-bar .bar .info {
+    margin-top: 7px;
+}
+
+.technical-bar .bar .info span {
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear;
+    opacity: 1;
+}
+
+.technical-bar .bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform-origin: left;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+
+
+.technical-bar .bar .progress-line span {
+    height: 100%;
+    position: absolute;
+    background-color: #0ef;
+    border-radius: 50px;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.progress-line.html span {
+    width: 90%;
+}
+
+.progress-line.css span {
+    width: 65%;
+}
+
+.progress-line.javascript span {
+    width: 85%;
+}
+
+.progress-line.React span {
+    width: 40%;
+}
+
+
+.progress-line span::after {
+    position: absolute;
+    padding: 1px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -20px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+
+.progress-line.html span::after {
+    content: "90%";
+}
+
+.progress-line.css span::after {
+    content: "65%";
+}
+
+.progress-line.javascript span::after {
+    content: "85%";
+}
+
+.progress-line.React span::after {
+    content: "40%";
+}
+
+.progress-line span::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0;
+    border-right-width: 0;
+    border-top-color: #000;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+
+.radial-bars {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 0 auto;
+
+}
+
+.radial-bars .radial-bar {
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.radial-bars .radial-bar svg {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+
+.radial-bars .radial-bar .progress-bar {
+    stroke-width: 10;
+    stop-color: #000;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+}
+
+
+@keyframes animate-bar {
+    100% {
+        stroke-dashoffset: -1;
+    }
+
+}
+
+.path {
+    stroke-width: 10;
+    fill: transparent;
+    stroke: #0ef;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+
+.path-1 {
+    animation: animate-path1 1s 1s linear forwards;
+}
+
+.path-2 {
+    animation: animate-path2 1s 1s linear forwards;
+}
+
+.path-3 {
+    animation: animate-path3 1s 1s linear forwards;
+}
+
+.path-4 {
+    animation: animate-path4 1s 1s linear forwards;
+}
+
+
+@keyframes animate-path1 {
+    100% {
+        stroke-dashoffset: 175;
+    }
+}
+
+@keyframes animate-path2 {
+    100% {
+        stroke-dashoffset: 125;
+    }
+}
+
+@keyframes animate-path3 {
+    100% {
+        stroke-dashoffset: 75;
+    }
+}
+
+@keyframes animate-path4 {
+    100% {
+        stroke-dashoffset: 50;
+    }
+}
+
+.radial-bar .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.radial-bar .text{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 80%;
+    bottom: -20px;
+    transform: translateX(-50%);
+    font-size: 17px;
+}
+
+
+.main-text{
+    padding-top: 130px;
+    margin-top: 200px;
+}
+
+.main-text h2{
+    line-height: 1;
+    text-align: center;
+    font-size: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

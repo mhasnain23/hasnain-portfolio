@@ -4,6 +4,7 @@
     font-weight: 600;
 }
 
+
 .portfolio {
     margin: 0 auto;
 }
@@ -218,15 +219,25 @@ form .send:hover {
 
 
 /* make responsive */
-@media (max-width: 768px) {
-
-    /* Navbar */
+@media (max-width: 500px) {
     .nav {
+        max-width: 500px;
         height: 60px;
     }
 
     .left {
-        font-size: 1rem;
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .left a {}
+
+    .right {
+        visibility: hidden;
+    }
+
+    .right ul li a {
+        color: #0D2438;
     }
 
     .leftSection {
